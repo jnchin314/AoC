@@ -42,6 +42,7 @@ build/
 cookies.txt
 
 # Advent of Code (IMPORTANT)
-input.txt
+input*.txt
 inputs/
 *.aoc
+.idea*
