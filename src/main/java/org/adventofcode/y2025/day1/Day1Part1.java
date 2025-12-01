@@ -33,8 +33,7 @@ public class Day1Part1 {
                 rotateValue *= -1;
             }
 
-            // the + 100 and modding 100 again is in case the number is under negative we can wrap to the top
-            currentLocation = ((currentLocation + rotateValue) % 100 + 100) % 100;
+            currentLocation = (currentLocation + rotateValue) % 100;
 
             if (currentLocation == lockSpot){
                 secretHitCount++;
