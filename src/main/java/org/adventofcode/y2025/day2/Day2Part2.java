@@ -3,6 +3,8 @@ package org.adventofcode.y2025.day2;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.sql.Time;
+import java.util.Date;
 import java.util.List;
 
 public class Day2Part2 {
@@ -48,8 +50,12 @@ public class Day2Part2 {
 
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         Day2Part2 day2Part1 = new Day2Part2();
         System.out.println(day2Part1.total);
+
+        long end = System.currentTimeMillis();
+        System.out.println("Took: " + (end - start) + " ms");
 
     }
 }
