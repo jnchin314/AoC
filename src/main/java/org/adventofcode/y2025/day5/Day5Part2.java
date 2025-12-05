@@ -38,7 +38,7 @@ public class Day5Part2 extends ReadFile {
         return Arrays.stream(idRange.split("-")).map(Long::parseLong).toList();
     }
     boolean checkWithinRange(List<Long> validIdRange, Long value){
-        if(validIdRange.getFirst() <= value && value <= validIdRange.getLast()){
+        if(validIdRange.getFirst() <= value && value <= validIdRange.getLast() + 1){
             return true;
         }
         return false;
@@ -50,13 +50,11 @@ public class Day5Part2 extends ReadFile {
 
         for(int i = 1;i< idList.size();i++){
             List<Long> currentRange = idList.get(i);
-            System.out.println("merged range : " + mergedItemRange + " comparing to current item range : " + currentRange);
             long start = currentRange.getFirst();
             long end = currentRange.getLast();
             if(checkWithinRange(mergedItemRange, start)){
                 if(mergedItemRange.getLast() < end){
                     mergedItemRange.set(1, end);
-                    System.out.println("new merged range : " + mergedItemRange);
                 }
             }else{
                 mergedList.add(mergedItemRange);
