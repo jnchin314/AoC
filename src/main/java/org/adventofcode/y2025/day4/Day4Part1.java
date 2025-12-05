@@ -51,6 +51,10 @@ public class Day4Part1 extends ReadFile {
     }
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
+
         Day4Part1 day4Part1 = new Day4Part1();
+        long end = System.currentTimeMillis();
+        System.out.println("Took: " + (end - start) + " ms");
     }
 }
