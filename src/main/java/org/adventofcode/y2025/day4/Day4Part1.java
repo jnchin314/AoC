@@ -11,7 +11,6 @@ public class Day4Part1 extends ReadFile {
     List<String> rollMap = new ArrayList<>();
     public Day4Part1() {
         super("src/main/resources/y2025/day4/input.txt");
-        int count = 0;
         int lineLength = lines.getFirst().length();
         StringBuilder sb = new StringBuilder();
         sb.repeat(".", lineLength+2);
