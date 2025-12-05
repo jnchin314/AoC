@@ -6,7 +6,7 @@ import java.util.List;
 import org.adventofcode.y2025.ReadFile;
 
 public class Day4Part2 extends ReadFile {
-    int count = 0;
+    int totalCount = 0;
     int lineLength;
     List<String> rollMap = new ArrayList<>();
     public Day4Part2() {
@@ -24,12 +24,12 @@ public class Day4Part2 extends ReadFile {
         rollMap.add(sb.toString());
         rollMap.forEach(System.out::println);
         int iterationCount = processMap();
-        count += iterationCount;
+        totalCount += iterationCount;
         while(iterationCount > 0){
             iterationCount = processMap();
-            count += iterationCount;
+            totalCount += iterationCount;
         }
-        System.out.println("total count " + count);
+        System.out.println("total count " + totalCount);
     }
 
     public int processMap(){
