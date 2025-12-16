@@ -27,10 +27,10 @@ public class Day7Part2 extends ReadFile {
                         nextLineSb.setCharAt(col, beam);
                         gridspots[nextRow][col] = 1;
                 } else if(currentChar == beam){
-                    if(nextLineSb.charAt(col) == '.'){
+                    if(nextLineChar == '.'){
                         nextLineSb.setCharAt(col,beam);
                         gridspots[nextRow][col] = gridspots[row][col];
-                    }else if(nextLineSb.charAt(col) == '^'){
+                    }else if(nextLineChar == '^'){
                         count++;
                         nextLineSb.setCharAt(col - 1,beam);
                         nextLineSb.setCharAt(col + 1,beam);
